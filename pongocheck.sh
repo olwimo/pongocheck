@@ -33,7 +33,7 @@ then
   abort 'Both `$INTERACTIVE` and `$NONINTERACTIVE` are set. Please unset at least one variable and try again.'
 fi
 
-if ! type brew &>/dev/null; then /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; brew install openssl ; fi
+if ! type openssl &>/dev/null; then if ! type brew &>/dev/null; then /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; fi ; brew install openssl ; fi
 
 [ -e ./pongocheck ] && mv -v pongocheck pongocheck.bak
 
